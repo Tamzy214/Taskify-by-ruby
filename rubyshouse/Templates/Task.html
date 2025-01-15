@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Task.css' %}">
+    <script src="{% static 'js/Taskify.js' %}" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Guerrilla&display=swap" rel="stylesheet">
+    <title>Taskify by Ruby</title>
+</head>
+<body>
+
+{% include "Nav.html" %}
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Sidebar -->
+        {% include "Sidebar.html" %} <!-- Includes external sidebar template -->
+
+        <!-- Dashboard -->
+        <div class="dashboard-container">
+            <!-- Tasks Box -->
+            <div class="dashboard-boxes">
+                <h3>Tasks</h3>
+                <ul>
+                    {% for task in tasks %}
+                        <li><a onclick="" class="dashboard-btn">{{ task.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div> <!-- End of Tasks Box -->
+
+            <!-- Calendar Box -->
+            <div class="dashboard-boxes">
+                <h3>Calendar</h3>
+            </div> <!-- End of Calendar Box -->
+
+        </div> <!-- End of Dashboard -->
+
+        <!-- Task Form Modal -->
+        <div id="task-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeTaskForm()" aria-label="Close">&times;</span>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="button" type="submit">Submit</button>
+                </form>
+            </div> <!-- End of Modal Content -->
+        </div> <!-- End of Task Modal -->
+    </div> <!-- End of Main Content -->
+</body>
+</html>

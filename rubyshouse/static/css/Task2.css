@@ -1,0 +1,25 @@
+body {
+    display: grid;
+    height: 200px;
+    grid-template-areas: "head head" "nav main" "footer footer";
+    grid-template-rows: 30px 1fr 30px;
+    grid-template-columns: 500px 1fr;
+    border: 1px solid black;
+    
+}
+
+header {
+    grid-area: head;
+    background-color: aqua;
+    text-align: center;
+}
+
+.task-menu {
+    grid-area: nav;
+    background-color: bisque;
+}
+
+footer {
+    grid-area: footer;
+    background-color: darkblue;
+}

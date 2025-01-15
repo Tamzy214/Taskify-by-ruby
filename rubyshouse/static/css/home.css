@@ -1,0 +1,185 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-style: normal;    
+    margin: 0;
+    padding: 0;
+    background: #606c88;  
+    background: -webkit-linear-gradient(to right, #729bf9, #4d77d8);
+    background: linear-gradient(to right, #b4c3e6, #4d77d8);
+  
+}
+  
+.text-box {
+    box-sizing: border-box;
+    width: calc(50% - 10%); /* Calculate the width to fill remaining space with a 5% margin on both sides */
+    margin: 50px 5% 20px 0; /* Add 5% margin on the right to match the left margin of the background box */
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: auto; /* Add overflow auto to enable scrolling if needed */
+}
+
+.text-box .content {
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.6;
+}
+
+.text-box .content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-box .content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.projects {
+    box-sizing: border-box;
+    width: calc(50% - 10%); /* Calculate the width to fill remaining space with a 5% margin on both sides */
+    margin: 50px 5% 20px 0; /* Add 5% margin on the right to match the left margin of the background box */
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: auto; /* Add overflow auto to enable scrolling if needed */
+}
+
+.projects h2, p {
+    font-family: 'Oswald', sans-serif;
+}
+
+.my-companies {
+    box-sizing: border-box;
+    width: calc(100% - 10%); /* Calculate the width to fill remaining space with a 5% margin on both sides */
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: auto; /* Add overflow auto to enable scrolling if needed */
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: auto; /* Add overflow auto to enable scrolling if needed */
+}
+
+.my-companies h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.contact-box-header {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.contact-box {
+    margin: auto;
+    display: flex;
+    justify-content: left;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 580px;
+    width: 100%;
+}
+
+.contact { 
+    display: flex;  
+    justify-content: center;
+    box-sizing: content-box;
+    padding: 20px;
+    border-radius: 16px;
+    height: 80%;
+    width: 30%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-name, .contact-email {
+    border: black;
+    border-radius: 10px;
+    height: 50px;
+    width: 300px;
+    margin: 15px 30px;
+    background-color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.contact-message {
+    border: none;
+    height: 150px;
+    width: 300px;
+    margin: auto 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+/* From Uiverse.io by adamgiebl */ 
+.btn {
+    float: right;
+    margin: 0 120px;
+    font-family: inherit;
+    font-size: 20px;
+    background: white;
+    color: black;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+  
+.btn span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.btn:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.btn:hover span {
+    transform: translateX(5em);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+from {
+    transform: translateY(0.1em);
+}
+
+to {
+    transform: translateY(-0.1em);
+}
+}

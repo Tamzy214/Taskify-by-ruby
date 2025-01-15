@@ -1,0 +1,13 @@
+zfooter {
+    background-color: #fff;
+    color: #000;
+    padding: 20px 0;
+}
+
+.copyright p {
+    margin: auto;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+}
+

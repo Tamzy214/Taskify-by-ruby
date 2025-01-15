@@ -1,0 +1,318 @@
+body {
+  font-family: "Edu AU VIC WA NT Arrows", cursive, sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  background: #8EB1C7;
+}
+
+a, ul, li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  margin: auto;
+  justify-self: center;
+  text-align: center;
+  font-family: "Edu AU VIC WA NT Arrows", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 40px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  height: 3em;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: rgb(255, 255, 255);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1em;
+  box-sizing: border-box;
+  color: #000000;
+  padding: 15px;
+  width: 25%;
+  height: auto;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+}
+
+.sidebar.active {
+  display: flex;
+  transform: translateX(0);
+  opacity: 1;
+
+}
+
+.create-task {
+  flex-direction: column;
+  margin: 0.9em auto;
+  text-align: center;
+  font-size: 1em;
+  background-color: #9DCED2;
+  border-radius: 10px;
+  color: #000000;
+  padding: 15px;
+  width: 60%;
+  height: auto;
+  transition: 0.6s;
+}
+
+.create-task:hover {
+  cursor: pointer;
+  background-color: #6d7ea5;
+  color: #ffffff;
+}
+
+span {
+  vertical-align: 0.2em;
+}
+
+.sidebar-btn {
+  flex-direction: column;
+  margin: 0.3125em;
+  text-align: center;
+  font-size: 1em;
+  background-color: #9DCED2;
+  border-radius: 10px;
+  color: #000000;
+  padding: 15px;
+  width: 80%;
+  height: auto;
+}
+
+.sidebar-btn:hover {
+  cursor: pointer;
+  background-color: #ffff;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+
+.dashboard-boxes {
+  flex: 0 0 48%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  font-size: 1em;
+  box-sizing: border-box;
+  color: #000000;
+  padding: 15px;
+  height: auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dashboard-btn {
+  display: flex;
+  justify-self: left;
+  justify-content: center;
+  font-size: 1em;
+  margin-top: 10px;
+  width: auto;
+  background-color: #9DCED2;
+  border-radius: 10px;
+  color: #000000;
+  padding: 15px;
+
+}
+
+.dashboard-btn:hover {
+  cursor: pointer;
+  background-color: #ffff;
+  transition: 0.5s;
+}
+
+/* Label */
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+/* Task */
+.task {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.form-control {
+  border: 1px solid #000;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+  margin: 15px auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.button {
+  border: none;
+  display: flex;
+  justify-self: left;
+  text-align: center;
+  font-size: 1em;
+  background-color: #9DCED2;
+  font-family: "Edu AU VIC WA NT Arrows", cursive;
+  border-radius: 10px;
+  color: #000000;
+  padding: 15px;
+  width: auto;
+  height: auto;
+  transition: 0.6s;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #6d7ea5;
+  color: #ffffff;
+}
+
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  height: 65%;
+  max-width: 700px;
+  border-radius: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav {
+    padding: 10px;
+  }
+
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-boxes {
+    flex: 0 0 100%;
+    font-size: 1rem;
+  }
+
+  .button, .nav-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .create-task {
+    width: auto;
+  }
+
+  .container {
+    gap: 10px;
+  }
+
+
+
+
+}
